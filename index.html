@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeCart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div class="animated-bg" id="animatedBg"></div>
+    <header class="fixed w-full top-0 z-50 bg-opacity-95" style="background-color: var(--background);">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl font-bold text-primary">
+                    <span style="color: var(--primary);">Luxe </span>Cart
+                </div>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Shop</a>
+                    <a href="#" class="nav-link">Categories</a>
+                    <a href="#" class="nav-link">Deals</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </nav>
+
+                <div class="flex items-center space-x-6">
+                    <div class="relative">
+                        <input type="text" placeholder="Search products..."
+                            class="bg-opacity-10 bg-white rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                            style="width: 200px;">
+                        <i class="fas fa-search absolute right-4 top-3 text-gray-400"></i>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <button class="relative">
+                            <i class="fas fa-heart text-xl"></i>
+                            <span
+                                class="absolute -top-2 -right-2 bg-primary rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                                3
+                            </span>
+                        </button>
+
+                        <button class="relative">
+                            <i class="fas fa-shopping-cart text-xl"></i>
+                            <span
+                                class="absolute -top-2 -right-2 bg-primary rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                                2
+                            </span>
+                        </button>
+
+                        <button>
+                            <i class="fas fa-user text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="glass-card flex items-center">
+                            <div class="w-1/2 p-8">
+                                <h1 class="text-5xl font-bold mb-6">Summer Collection 2023</h1>
+                                <p class="text-xl mb-8">Discover the latest trends and styles</p>
+                                <button class="bg-primary px-8 py-3 rounded-full hover:opacity-90 transition">
+                                    Shop Now
+                                </button>
+                            </div>
+                            <div class="w-1/2">
+                                <img src="https://picsum.photos/800/600?random=1" alt="Summer Collection"
+                                    class="rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Shop by Category</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="glass-card">
+                    <img src="https://picsum.photos/400/300?random=2" alt="Electronics" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Electronics</h3>
+                    <p class="text-gray-400">Latest gadgets and devices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Featured Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="product-card glass-card">
+                    <img src="https://picsum.photos/400/400?random=3" alt="Product" class="rounded-lg mb-4">
+                    <div class="product-overlay">
+                        <h3 class="text-xl font-semibold mb-2">Wireless Headphones</h3>
+                        <p class="text-gray-400 mb-4">$199.99</p>
+                        <button class="bg-primary px-6 py-2 rounded-full hover:opacity-90 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="chat-widget">
+        <button class="chat-button" id="chatToggle">
+            <i class="fas fa-comments"></i>
+        </button>
+
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="flex items-center">
+                    <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                    <span>Customer Support</span>
+                </div>
+                <button id="chatClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+            </div>
+
+            <div class="chat-input">
+                <div class="flex">
+                    <input type="text" id="messageInput" placeholder="Type your message..."
+                        class="flex-1 bg-opacity-10 bg-white rounded-l-full px-4 py-2 focus:outline-none">
+                    <button class="bg-primary px-6 rounded-r-full hover:opacity-90 transition">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Site. Made By <a href="https://www.linkedin.com/in/Momo">Momo</a></p>
+    </footer>
+    <script src="js/index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+
+</html>
